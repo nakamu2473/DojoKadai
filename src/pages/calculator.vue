@@ -32,7 +32,7 @@ export default {
       this.operator = "*"
     },
     divideNum(){
-      this.operator = "%"
+      this.operator = "/"
     },
     calNum(){
       switch(this.operator) {
@@ -45,8 +45,8 @@ export default {
         case "*":
           this.num3 = this.num * this.num2
           break;
-        case "%":
-          this.num3 = this.num % this.num2
+        case "/":
+          this.num3 = this.num / this.num2
           break;
         default:
       }
@@ -73,7 +73,7 @@ export default {
       <td><button  @click="addNum()">+</button></td>
       <td><button  @click="subtractNum()">-</button></td>
       <td><button  @click="multiplyNum()">*</button></td>
-      <td><button  @click="divideNum()">%</button></td>
+      <td><button  @click="divideNum()">/</button></td>
     </tr>
     <tr>
       <td><button  @click="clearNum()">c</button></td>
