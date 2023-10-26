@@ -7,7 +7,7 @@ export default {
     return {
       num: 0,
       num2: 0,
-      num3: 0,
+      result: 0,
       operator: "",
 
     }
@@ -37,16 +37,16 @@ export default {
     calNum(){
       switch(this.operator) {
         case "+":
-          this.num3 = this.num + this.num2
+          this.result = this.num + this.num2
           break;
         case "-":
-          this.num3 = this.num - this.num2
+          this.result = this.num - this.num2
           break;
         case "*":
-          this.num3 = this.num * this.num2
+          this.result = this.num * this.num2
           break;
         case "/":
-          this.num3 = this.num / this.num2
+          this.result = this.num / this.num2
           break;
         default:
       }
@@ -55,7 +55,7 @@ export default {
     clearNum() {
       this.num = 0
       this.num2 = 0
-      this.num3 = 0
+      this.result = 0
       this.operator = ""
     }
   }
@@ -64,7 +64,7 @@ export default {
 <template>
   <p>数1：{{ num }}</p>
   <p>数2：{{ num2 }}</p>
-  <p>計算結果：{{ num3 }}</p>
+  <p>計算結果：{{ result }}</p>
   <table>
     <tr>
       <td v-for="i in 9"><button  @click="inputNum(i)">{{ i }}</button></td>
